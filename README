@@ -1,0 +1,4 @@
+crows-prototype
+===============
+
+Crows (Prototype) is an accounting engine implemented in Scala and using a graph database as a data and object backend. It's mostly a personal pet project to learn different techonlogies and patterns.
