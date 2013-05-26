@@ -8,7 +8,10 @@ object ApplicationBuild extends Build {
   val appVersion      = "1.0-SNAPSHOT"
 
   val appDependencies = Seq(
-    // Add your project dependencies here,
+    // crows-prototype dependencies
+    "org.neo4j"%"neo4j"%"1.8.2",
+      
+    // Original play dependencies
     javaCore,
     javaJdbc,
     javaEbean
