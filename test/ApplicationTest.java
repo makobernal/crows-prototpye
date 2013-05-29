@@ -37,5 +37,17 @@ public class ApplicationTest {
 		Result culo = Application.cypher();
 		Assert.assertNotNull(culo);
 	}
+	
+	@Test
+	public void tinkerTest() {
+		Graph graph = new Neo4jGraph("/tmp/my_graph");
+		Vertex a = graph.addVertex(null);
+		Vertex b = graph.addVertex(null);
+		a.setProperty("name","marko");
+		b.setProperty("name","peter");
+		Edge e = graph.addEdge(null, a, b, "knows");
+		e.setProperty("since", 2006);
+		graph.shutdown();
+	}
 
 }

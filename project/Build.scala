@@ -10,6 +10,9 @@ object ApplicationBuild extends Build {
   val appDependencies = Seq(
     // crows-prototype dependencies
     "org.neo4j"%"neo4j"%"1.8.2",
+    "com.tinkerpop.blueprints"%"blueprints-core"%"2.3.0",
+    "com.tinkerpop.blueprints"%"blueprints-core"%"??",
+    "com.tinkerpop"%"frames"%"2.3.1",
       
     // Original play dependencies
     javaCore,
