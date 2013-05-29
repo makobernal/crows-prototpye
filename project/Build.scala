@@ -11,7 +11,7 @@ object ApplicationBuild extends Build {
     // crows-prototype dependencies
     "org.neo4j"%"neo4j"%"1.8.2",
     "com.tinkerpop.blueprints"%"blueprints-core"%"2.3.0",
-    "com.tinkerpop.blueprints"%"blueprints-core"%"??",
+    "com.tinkerpop.blueprints"%"blueprints-neo4j-graph"%"2.3.0",
     "com.tinkerpop"%"frames"%"2.3.1",
       
     // Original play dependencies

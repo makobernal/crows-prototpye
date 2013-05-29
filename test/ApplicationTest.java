@@ -7,6 +7,12 @@ import org.junit.Test;
 
 import play.mvc.Content;
 import play.mvc.Result;
+
+import com.tinkerpop.blueprints.Edge;
+import com.tinkerpop.blueprints.Graph;
+import com.tinkerpop.blueprints.Vertex;
+import com.tinkerpop.blueprints.impls.neo4j.Neo4jGraph;
+
 import controllers.Application;
 
 /**
@@ -37,14 +43,14 @@ public class ApplicationTest {
 		Result culo = Application.cypher();
 		Assert.assertNotNull(culo);
 	}
-	
+
 	@Test
 	public void tinkerTest() {
 		Graph graph = new Neo4jGraph("/tmp/my_graph");
 		Vertex a = graph.addVertex(null);
 		Vertex b = graph.addVertex(null);
-		a.setProperty("name","marko");
-		b.setProperty("name","peter");
+		a.setProperty("name", "marko");
+		b.setProperty("name", "peter");
 		Edge e = graph.addEdge(null, a, b, "knows");
 		e.setProperty("since", 2006);
 		graph.shutdown();
